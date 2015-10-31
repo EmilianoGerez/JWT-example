@@ -1,0 +1,69 @@
+<section>
+	<div class="row">
+		<div class="jumbotron">
+			<h1>JWT authentication example</h1>
+			<p>Features</p>
+			<ul>
+				<li>Json Web Token</li>
+				<li>Refresh token pattern</li>
+				<li>MEAN Stack</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="row">
+		<div class="col-xs-6 login-panel" ng-controller="UserController" ng-hide="isAuth()">
+			<div class="well clearfix">
+				<div class="col-xs-8 col-xs-offset-2 text-center">
+					<i class="mdi-action-account-circle"></i>
+				</div>
+				<div class="col-xs-12">
+					<a href="#/signup" class="btn btn-primary btn-lg btn-block">Sing Up</a>
+					<a href="#/signin" class="btn btn-success btn-lg btn-block">Login</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 user-panel" ng-controller="UserController" ng-show="isAuth()">
+			<div class="well clearfix">
+				<div class="col-xs-4">
+					<i class="mdi-action-account-circle"></i>
+				</div>
+				<div class="col-xs-8">
+					<h4>Hello {{payload.name}}</h4>
+					<h4>Role: {{payload.role}}</h4>
+					<a href="javascript:void(0)"
+						class="btn btn-danger btn-lg btn-block"
+					ng-click="logout()">LogOut</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6" ng-controller="HomeCtrl">
+			<div class="well clearfix">
+				<h3>Token</h3>
+			<pre>{{token}}</pre>
+			<h3>Token decode - payload</h3>
+		<pre>{{decode | json}}</pre>
+	</div>
+</div>
+</div>
+<div class="row" ng-controller="HomeCtrl">
+<div class="col-xs-6">
+	<div class="well clearfix">
+		<h4>Secure API: {{secureMessage}}</h4>
+		<a href="javascript:void(0)"
+			class="btn btn-info pull-right"
+		ng-click="secureApi()">Check accces</a>
+		<a href="#/secureview" class="btn btn-primary pull-right">Secure route</a>
+	</div>
+</div>
+<div class="col-xs-6">
+	<div class="well clearfix">
+		<h4>Admin secure API: {{adminMessage}}</h4>
+		<a href="javascript:void(0)"
+			class="btn btn-info pull-right"
+		ng-click="adminApi()">Check accces</a>
+	</div>
+</div>
+</div>
+</section>

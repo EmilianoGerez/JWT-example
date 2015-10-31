@@ -1,0 +1,16 @@
+.login-panel .mdi-action-account-circle{
+	font-size: 150px;
+	color: #CFD8DC;
+}
+.user-panel .mdi-action-account-circle{
+	font-size: 110px;
+	color: #CFD8DC;
+}
+
+.secure-view{
+	text-align: center;
+	color: #CFD8DC;
+}
+.secure-view i{
+	font-size: 200px;
+}

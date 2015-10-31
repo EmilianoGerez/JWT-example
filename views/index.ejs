@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/roboto.css">
+        <link rel="stylesheet" href="assets/stylesheets/style.css">
+    </head>
+    <body ng-app="jwtApp">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Menui-->
+        <% include menu %>
+        <!-- Add your site or application content here -->
+        <div class="container">
+        	<div ui-view></div>
+        </div>
+        
+
+				<!-- Vendor JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+        <script src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+
+        <!-- Angular scripts -->
+        <script src="modules/configApp.client.js"></script>
+        <script src="modules/mainApp.client.js"></script>
+            <!-- main module -->
+            <script src="modules/main/config/main.client.routes.js"></script>
+            <script src="modules/main/controllers/home.client.controller.js"></script>
+            <!-- user module -->
+            <script src="modules/user/user.client.register.js"></script>
+            <script src="modules/user/config/user.client.routes.js"></script>
+            <script src="modules/user/services/user.client.service.js"></script>
+            <script src="modules/user/controllers/user.client.controller.js"></script>
+        
+        <!-- Error Message -->
+        <script type="text/ng-template" id="form-messages">
+            <div ng-message="required">Required</div>
+            <div ng-message="minlength">Too short</div>
+            <div ng-message="maxlength">Too long</div>
+            <div ng-message="email">Invalid email address</div>
+            <div ng-message="compareTo">Must match the previous entry</div>
+            <div ng-message="recordAvailable">The name is already in use...</div>
+        </script>
+    </body>
+</html>

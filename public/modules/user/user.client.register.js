@@ -1,0 +1,1 @@
+AppConfiguration.registerModule('user');
